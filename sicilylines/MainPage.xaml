@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="sicilylines.MainPage"
+             Title="Connexion">
+
+    <Grid RowDefinitions="Auto,*,Auto"
+          Padding="20">
+
+        <!-- En-tête -->
+        <VerticalStackLayout Grid.Row="0" Spacing="5" Margin="0,30,0,0">
+            <Image Source="app_logo.png"
+                   HeightRequest="100"
+                   HorizontalOptions="Center" />
+            <Label Text="Bienvenue"
+                   FontSize="32"
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold"
+                   Margin="0,20,0,0" />
+        </VerticalStackLayout>
+
+        <!-- Formulaire de connexion -->
+        <VerticalStackLayout Grid.Row="1"
+                             VerticalOptions="Center"
+                             Spacing="20">
+
+            <!-- Champ de connexion (LOGIN) -->
+            <VerticalStackLayout Spacing="5">
+                <Label Text="Identifiant" 
+                       FontSize="14"
+                       TextColor="Gray" />
+                <Frame BorderColor="LightGray" 
+                       Padding="15,0" 
+                       HasShadow="False"
+                       CornerRadius="5"
+                       HeightRequest="50">
+                    <Entry Placeholder="Entrez votre identifiant"
+                           x:Name="UsernameEntry"
+                           VerticalOptions="Center"
+                           BackgroundColor="Transparent" />
+                </Frame>
+            </VerticalStackLayout>
+
+            <!-- Champ de mot de passe -->
+            <VerticalStackLayout Spacing="5">
+                <Label Text="Mot de passe" 
+                       FontSize="14"
+                       TextColor="Gray" />
+                <Frame BorderColor="LightGray" 
+                       Padding="15,0" 
+                       HasShadow="False"
+                       CornerRadius="5"
+                       HeightRequest="50">
+                    <Entry Placeholder="Entrez votre mot de passe"
+                           x:Name="PasswordEntry"
+                           IsPassword="True"
+                           VerticalOptions="Center"
+                           BackgroundColor="Transparent" />
+                </Frame>
+            </VerticalStackLayout>
+
+            <!-- Option "Se souvenir de moi" -->
+            <HorizontalStackLayout HorizontalOptions="Start">
+                <CheckBox x:Name="RememberMeCheckBox" />
+                <Label Text="Se souvenir de moi"
+                       VerticalOptions="Center" />
+            </HorizontalStackLayout>
+
+            <!-- Bouton Se Connecter -->
+            <Button Text="SE CONNECTER"
+                    x:Name="LoginButton"
+                    Clicked="LoginButton_Clicked"
+                    BackgroundColor="#007AFF"
+                    TextColor="White"
+                    CornerRadius="5"
+                    HeightRequest="50"
+                    Margin="0,20,0,0" />
+
+
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>
